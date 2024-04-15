@@ -1,0 +1,5090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1076</width>
+    <height>663</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QStatusBar {
+    background:rgb(26, 26, 26);
+}
+
+QStatusBar::item {
+    border: 1px solid red;
+    border-radius: 3px;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QFrame" name="main_frame">
+      <property name="styleSheet">
+       <string notr="true">QFrame#main_frame {
+background-color: rgb(45, 45, 45);
+}
+QRadioButton{
+	color: rgb(255, 255, 255);
+}
+QTableWidget QTableCornerButton::section{
+	background-color: rgb(19, 34, 64);
+	border:1px solid rgb(19, 34, 66);
+}
+
+/* ScrollBar Vertical */
+
+QScrollBar::vertical{
+	border:none;
+	background-color:rgb(62, 62, 62);
+	width:14px;
+	margin:15px 0 15px 0;
+	border-radius:0px;
+}
+
+QScrollBar::handle::vertical{
+	background-color:#1C1C1C;
+	border-radius:2px;
+	min-height:30px;
+}
+QScrollBar::handle::vertical:hover{
+	background-color: #2E2E2E;
+}
+QScrollBar::handle::vertical:pressed{
+	background-color: rgb(255, 84, 152);
+}
+
+QScrollBar::sub-line:vertical{
+	border:none;
+	background-color:#151515;
+	height:15px;
+	border-top-left-radius:2px;
+	border-top-right-radius:2px;
+	subcontrol-position:top;
+	subcontrol-origin:margin;
+}
+QScrollBar::sub-line:vertical:hover{
+	background-color:rgb(255, 84, 152);
+}
+QScrollBar::sub-line:vertical:pressed{
+	background-color:  rgb(255, 84, 152);
+}
+QScrollBar::add-line:vertical{
+	border:none;
+	background-color: #151515;
+	height:15px;
+	border-bottom-left-radius:2px;
+	border-bottom-right-radius:2px;
+	subcontrol-position:bottom;
+	subcontrol-origin:margin;
+}
+QScrollBar::add-line:vertical:hover{
+	background-color:rgb(255, 84, 152);
+}
+QScrollBar::add-line:vertical:pressed{
+	background-color:  rgb(255, 84, 152);
+}
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical{
+	background:none;
+}	
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical{
+	background:none;
+}	
+
+/* ScrollBar Horizontal */
+
+QScrollBar::horizontal{
+	border:none;
+	background-color:rgb(62, 62, 62);
+	height:14px;
+	margin:0 15px 0 15px;
+	border-radius:0px;
+}
+
+QScrollBar::handle::horizontal{
+	background-color:#1C1C1C;
+	border-radius:2px;
+	min-height:30px;
+}
+QScrollBar::handle::horizontal:hover{
+	background-color: #2E2E2E;
+}
+QScrollBar::sub-line:horizontal{
+	border:none;
+	background-color: #151515;
+	width:15px;
+	border-top-left-radius:2px;
+	border-bottom-left-radius:2px;
+	subcontrol-position:left;
+	subcontrol-origin:margin;
+}
+QScrollBar::sub-line:horizontal:hover{
+	background-color: rgb(255, 84, 152);
+}
+QScrollBar::sub-line:horizontal:pressed{
+	background-color: rgb(255, 84, 152);
+}
+QScrollBar::add-line:horizontal{
+	border:none;
+	background-color:#151515;
+	width:15px;
+	border-top-right-radius:2px;
+	border-bottom-right-radius:2px;
+	subcontrol-position:right;
+	subcontrol-origin:margin;
+}
+QScrollBar::add-line:horizontal:hover{
+	background-color: rgb(255, 84, 152);
+}
+QScrollBar::add-line:horizontal:pressed{
+	background-color:  rgb(255, 84, 152);
+}
+QScrollBar::up-arrow:horizontal, QScrollBar::down-arrow:horizontal{
+	background:none;
+}	
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal{
+	background:none;
+}
+QProgressBar{
+	background-color: rgb(50, 50, 50);
+	color: rgb(35, 35, 35);	
+	border-style: rgb(85, 255, 0);
+	border-radius: 20px;
+}
+QProgressBar::chunk{
+	border-radius: 20px;
+	  background-color:qlineargradient(spread:pad, x1:0.051, y1:0.0516364, x2:1, y2:1, stop:0 rgba(229, 144, 38, 255), stop:1 rgba(249, 178, 0, 255));
+}
+</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="Menu_Frame">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>1081</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">#Menu_Frame{
+background-color:rgb(26, 26, 26);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="pushButton_4">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>5</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border:0;
+background-color:rgb(26, 26, 26);</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/bolt.png</normaloff>:/newPrefix/icons/bolt.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>11</y>
+          <width>461</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(152, 152, 152);
+background-color:rgb(26, 26, 26);</string>
+        </property>
+        <property name="text">
+         <string>Laroussi Universal Tool V1.0 | https://laroussigsm.net/</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Exit_Button">
+        <property name="geometry">
+         <rect>
+          <x>1036</x>
+          <y>6</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string>Close</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color:rgb(45, 45, 45);
+	color: rgb(255, 255, 255);
+	border:0;
+
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+}
+QPushButton:hover{
+	background-color:rgb(235, 59, 90);
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/cancel.png</normaloff>:/newPrefix/icons/cancel.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="pushButton_5">
+        <property name="geometry">
+         <rect>
+          <x>1003</x>
+          <y>6</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color:rgb(45, 45, 45);
+	color: rgb(255, 255, 255);
+	border:0;
+
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+}
+QPushButton:hover{
+	background-color:rgb(50, 50, 50);
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normaloff>:/images/Images/minimize.png</normaloff>:/images/Images/minimize.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Minimize_Button">
+        <property name="geometry">
+         <rect>
+          <x>970</x>
+          <y>6</y>
+          <width>31</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+	background-color:rgb(45, 45, 45);
+	color: rgb(255, 255, 255);
+	border:0;
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+}
+QPushButton:hover{
+	background-color:rgb(50, 50, 50);
+	color: rgb(255, 255, 255);
+}</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/minus.png</normaloff>:/newPrefix/icons/minus.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>16</width>
+          <height>16</height>
+         </size>
+        </property>
+        <property name="flat">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="tab_frame">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>40</y>
+         <width>1081</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QFrame{
+    background-color: rgb(39, 39, 39);
+}
+
+QPushButton{
+	background-color: rgb(50, 50, 50);
+	color: rgb(255, 255, 255);
+	border:0;
+	margin-right:2px;
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}
+QPushButton:hover{
+	background-color: rgb(95, 95, 95);
+	color: rgb(255, 255, 255);
+}</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Raised</enum>
+       </property>
+       <widget class="QPushButton" name="Home_Btn">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/home.png</normaloff>:/newPrefix/icons/home.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>58</width>
+          <height>58</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="MediaTek_Btn">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+          <bold>true</bold>
+          <underline>false</underline>
+          <strikeout>false</strikeout>
+          <stylestrategy>PreferDefault</stylestrategy>
+         </font>
+        </property>
+        <property name="acceptDrops">
+         <bool>false</bool>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="statusTip">
+         <string/>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="autoFillBackground">
+         <bool>false</bool>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/MEDIATEK.png</normaloff>:/newPrefix/icons/MEDIATEK.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>58</width>
+          <height>58</height>
+         </size>
+        </property>
+        <property name="autoRepeat">
+         <bool>false</bool>
+        </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Qualcomm_Btn">
+        <property name="geometry">
+         <rect>
+          <x>490</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/Qualcomm.png</normaloff>:/newPrefix/icons/Qualcomm.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="TestPoints">
+        <property name="geometry">
+         <rect>
+          <x>760</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>11</pointsize>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/Test-Point.png</normaloff>:/newPrefix/icons/Test-Point.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="About_Btn">
+        <property name="geometry">
+         <rect>
+          <x>850</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/help.png</normaloff>:/newPrefix/icons/help.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>50</width>
+          <height>50</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QWidget" name="widget" native="true">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>20</y>
+          <width>51</width>
+          <height>51</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border-image: url(:/newPrefix/icons/tyrannosaurus-rex.png);</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>20</y>
+          <width>101</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <family>Segoe UI</family>
+          <pointsize>25</pointsize>
+          <italic>false</italic>
+          <bold>true</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(222, 49, 99);
+font: 700 25pt &quot;Segoe UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>T-REX</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label_3">
+        <property name="geometry">
+         <rect>
+          <x>80</x>
+          <y>50</y>
+          <width>101</width>
+          <height>16</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>9</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">color: rgb(241, 241, 241);</string>
+        </property>
+        <property name="text">
+         <string> UNIVERSAL TOOL</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Samsung_Btn">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/samsung.png</normaloff>:/newPrefix/icons/samsung.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Huawei_Btn">
+        <property name="geometry">
+         <rect>
+          <x>400</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/huawei.png</normaloff>:/newPrefix/icons/huawei.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Android_Btn">
+        <property name="geometry">
+         <rect>
+          <x>670</x>
+          <y>0</y>
+          <width>91</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="icon">
+         <iconset resource="ico.qrc">
+          <normaloff>:/newPrefix/icons/ANDROID.png</normaloff>:/newPrefix/icons/ANDROID.png</iconset>
+        </property>
+        <property name="iconSize">
+         <size>
+          <width>70</width>
+          <height>70</height>
+         </size>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_9">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>134</y>
+         <width>1081</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(26, 26, 26);
+color: rgb(210, 218, 226);</string>
+       </property>
+       <property name="text">
+        <string>WELCOME TO LAROUSSI T-REX TOOL V1.0 BETA                                                    </string>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::AutoText</enum>
+       </property>
+       <property name="scaledContents">
+        <bool>false</bool>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="partProgressText">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>560</y>
+         <width>301</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="fullProgressText">
+       <property name="geometry">
+        <rect>
+         <x>570</x>
+         <y>580</y>
+         <width>301</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QStackedWidget" name="Container_tab">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>180</y>
+         <width>1071</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>1</number>
+       </property>
+       <widget class="QWidget" name="Home_tab">
+        <property name="styleSheet">
+         <string notr="true"/>
+        </property>
+        <widget class="QStackedWidget" name="log_win_tab">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>10</y>
+           <width>1071</width>
+           <height>451</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QLineEdit {
+    border: none ;
+	color: rgb(50, 50, 50);
+    border-radius: 2px;
+    padding: 0 8px;
+    background: rgb(68, 68, 68);
+	border-bottom: 2px solid rgb(98, 98, 98);
+	color: rgb(248, 248, 248);
+    selection-background-color: darkgray;
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="login">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <widget class="QFrame" name="frame">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>50</y>
+             <width>371</width>
+             <height>371</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame{
+background-color: rgb(30, 30, 30);
+border-radius:8px;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QLabel" name="label_4">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>60</y>
+              <width>221</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>MS Shell Dlg 2</family>
+              <pointsize>14</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: 0;
+color: qlineargradient(spread:pad, x1:0.961, y1:0.091, x2:1, y2:0.00568182, stop:0.409091 rgba(0, 175, 178, 255), stop:1 rgba(255, 255, 255, 255));</string>
+            </property>
+            <property name="text">
+             <string>LOGIN T-REX SYSTEM</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="login_username">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>140</y>
+              <width>311</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Username</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="login_password">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>190</y>
+              <width>311</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Password</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="Forget_Pass_Button">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>230</y>
+              <width>131</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  color: rgb(93, 173, 226);
+	background-color:0;
+border:0;
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 2px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Forget Password ?</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="login_Btn">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>270</y>
+              <width>311</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+              <stylestrategy>PreferDefault</stylestrategy>
+              <kerning>false</kerning>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Laroussi </string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+QPushButton::pressed{
+	padding-left:5px;
+	padding-top: 3px;
+	background-color: rgb(223, 160, 5);
+}</string>
+            </property>
+            <property name="text">
+             <string>Sign in</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="SignUp_Button">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>310</y>
+              <width>81</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  background-color: 0;
+  color: rgb(93, 173, 226);
+  border-radius: 5px;
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Sign up Now</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_7">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>311</y>
+              <width>141</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>Yu Gothic UI</family>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: #F2F3F4;
+background-color: 0;</string>
+            </property>
+            <property name="text">
+             <string>Don't have an account!!!</string>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QWidget" name="widget_2" native="true">
+           <property name="geometry">
+            <rect>
+             <x>480</x>
+             <y>0</y>
+             <width>111</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/newPrefix/icons/T.logo2.png);</string>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_4">
+           <property name="geometry">
+            <rect>
+             <x>-110</x>
+             <y>-20</y>
+             <width>361</width>
+             <height>481</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/newPrefix/icons/Texteur.png);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+          <widget class="QFrame" name="frame_5">
+           <property name="geometry">
+            <rect>
+             <x>830</x>
+             <y>140</y>
+             <width>401</width>
+             <height>501</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-image: url(:/newPrefix/icons/Texteur.png);</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+          </widget>
+          <zorder>frame_4</zorder>
+          <zorder>frame</zorder>
+          <zorder>widget_2</zorder>
+          <zorder>frame_5</zorder>
+         </widget>
+         <widget class="QWidget" name="registration">
+          <widget class="QFrame" name="frame_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>1051</width>
+             <height>431</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame#frame_2{
+border-radius:5px;
+background-color: 0;
+}</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QPushButton" name="Reg_Btn">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>250</y>
+              <width>791</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+              <stylestrategy>PreferDefault</stylestrategy>
+              <kerning>false</kerning>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Laroussi </string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+QPushButton::pressed{
+	padding-left:5px;
+	padding-top: 5px;
+	background-color: rgb(163, 228, 215);
+}</string>
+            </property>
+            <property name="text">
+             <string>Register</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Reg_First_username">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>80</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your First Name ...</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Reg_email">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>120</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Normal</enum>
+            </property>
+            <property name="placeholderText">
+             <string>XXXXX@Email.com</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Reg_last_username">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>80</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Last Name ...</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radio_female_Button">
+            <property name="geometry">
+             <rect>
+              <x>860</x>
+              <y>170</y>
+              <width>91</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Female</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radio_male_Button">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>170</y>
+              <width>81</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(255, 255, 255);</string>
+            </property>
+            <property name="text">
+             <string>Male</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_5">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>170</y>
+              <width>111</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Select Gender</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="Country_Comb">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>120</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QComboBox {
+	background-color: rgb(50, 50, 50);
+	color: rgb(250, 250, 250);
+    border: 1px solid rgb(66, 66, 66);
+    border-radius: 3px;
+    padding: 0 0 0 8px;
+}
+QComboBox::drop-down {
+    border: 0px;
+}
+QComboBox::down-arrow {
+    image: url(:/newPrefix/icons/down-arrow.png);
+	width:14px;
+	height:14px;
+	margin-right: 15px;
+}
+
+QComboBox QListView { 
+	background-color: rgb(35, 35, 35);	
+	color: rgb(255, 255, 255);
+}</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>20</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>Select Country</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Afghanistan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/af.png</normaloff>:/newPrefix2/Country Flags/af.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Albania</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/al.png</normaloff>:/newPrefix2/Country Flags/al.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Algeria</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/dz.png</normaloff>:/newPrefix2/Country Flags/dz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Andorra</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ad.png</normaloff>:/newPrefix2/Country Flags/ad.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Angola</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ao.png</normaloff>:/newPrefix2/Country Flags/ao.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Antigua and Barbuda	</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ag.png</normaloff>:/newPrefix2/Country Flags/ag.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Argentina</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ar.png</normaloff>:/newPrefix2/Country Flags/ar.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Armenia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/am.png</normaloff>:/newPrefix2/Country Flags/am.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Australia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ai.png</normaloff>:/newPrefix2/Country Flags/ai.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Austria</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/at.png</normaloff>:/newPrefix2/Country Flags/at.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Azerbaijan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/az.png</normaloff>:/newPrefix2/Country Flags/az.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bahamas</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bs.png</normaloff>:/newPrefix2/Country Flags/bs.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bahrain</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bh.png</normaloff>:/newPrefix2/Country Flags/bh.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bangladesh</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bd.png</normaloff>:/newPrefix2/Country Flags/bd.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Barbados</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bb.png</normaloff>:/newPrefix2/Country Flags/bb.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Belarus</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/by.png</normaloff>:/newPrefix2/Country Flags/by.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Belgium</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/be.png</normaloff>:/newPrefix2/Country Flags/be.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Belize</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bz.png</normaloff>:/newPrefix2/Country Flags/bz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Benin</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bj.png</normaloff>:/newPrefix2/Country Flags/bj.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bhutan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bt.png</normaloff>:/newPrefix2/Country Flags/bt.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bolivia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bo.png</normaloff>:/newPrefix2/Country Flags/bo.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bosnia and Herzegovina</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ba.png</normaloff>:/newPrefix2/Country Flags/ba.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Botswana</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bw.png</normaloff>:/newPrefix2/Country Flags/bw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Brazil</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/br.png</normaloff>:/newPrefix2/Country Flags/br.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Brunei</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bn.png</normaloff>:/newPrefix2/Country Flags/bn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Bulgaria</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bg.png</normaloff>:/newPrefix2/Country Flags/bg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Burkina Faso</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bf.png</normaloff>:/newPrefix2/Country Flags/bf.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Burundi</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/bi.png</normaloff>:/newPrefix2/Country Flags/bi.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Côte d'Ivoire</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ci.png</normaloff>:/newPrefix2/Country Flags/ci.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cabo Verde</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cv.png</normaloff>:/newPrefix2/Country Flags/cv.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cambodia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kh.png</normaloff>:/newPrefix2/Country Flags/kh.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cameroon</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cm.png</normaloff>:/newPrefix2/Country Flags/cm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Canada</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ca.png</normaloff>:/newPrefix2/Country Flags/ca.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Central African Republic</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cf.png</normaloff>:/newPrefix2/Country Flags/cf.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Chad</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ro.png</normaloff>:/newPrefix2/Country Flags/ro.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Chile</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cl.png</normaloff>:/newPrefix2/Country Flags/cl.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>China</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cn.png</normaloff>:/newPrefix2/Country Flags/cn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Colombia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/co.png</normaloff>:/newPrefix2/Country Flags/co.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Comoros</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/km.png</normaloff>:/newPrefix2/Country Flags/km.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Congo (Congo-Brazzaville)</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cg.png</normaloff>:/newPrefix2/Country Flags/cg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Costa Rica</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cr.png</normaloff>:/newPrefix2/Country Flags/cr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Croatia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/hr.png</normaloff>:/newPrefix2/Country Flags/hr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cuba</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cu.png</normaloff>:/newPrefix2/Country Flags/cu.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cyprus</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cy.png</normaloff>:/newPrefix2/Country Flags/cy.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Czechia (Czech Republic)</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cz.png</normaloff>:/newPrefix2/Country Flags/cz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Democratic Republic of the Congo</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/cd.png</normaloff>:/newPrefix2/Country Flags/cd.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Denmark</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/dk.png</normaloff>:/newPrefix2/Country Flags/dk.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Djibouti</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/dj.png</normaloff>:/newPrefix2/Country Flags/dj.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dominica</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/do.png</normaloff>:/newPrefix2/Country Flags/do.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Dominican Republic</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/do.png</normaloff>:/newPrefix2/Country Flags/do.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ecuador</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ec.png</normaloff>:/newPrefix2/Country Flags/ec.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Egypt</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/eg.png</normaloff>:/newPrefix2/Country Flags/eg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>El Salvador</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sv.png</normaloff>:/newPrefix2/Country Flags/sv.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Equatorial Guinea</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gq.png</normaloff>:/newPrefix2/Country Flags/gq.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Eritrea</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/er.png</normaloff>:/newPrefix2/Country Flags/er.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Estonia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ee.png</normaloff>:/newPrefix2/Country Flags/ee.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Eswatini (fmr. &quot;Swaziland&quot;)</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/Esw.png</normaloff>:/newPrefix2/Country Flags/Esw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ethiopia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/et.png</normaloff>:/newPrefix2/Country Flags/et.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Fiji</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/fj.png</normaloff>:/newPrefix2/Country Flags/fj.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Finland</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/fi.png</normaloff>:/newPrefix2/Country Flags/fi.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>France</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/fr.png</normaloff>:/newPrefix2/Country Flags/fr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Gabon</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ga.png</normaloff>:/newPrefix2/Country Flags/ga.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Gambia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gm.png</normaloff>:/newPrefix2/Country Flags/gm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Georgia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ge.png</normaloff>:/newPrefix2/Country Flags/ge.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Germany</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/de.png</normaloff>:/newPrefix2/Country Flags/de.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ghana</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gh.png</normaloff>:/newPrefix2/Country Flags/gh.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Greece</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gr.png</normaloff>:/newPrefix2/Country Flags/gr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Grenada</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gd.png</normaloff>:/newPrefix2/Country Flags/gd.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Guatemala</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gt.png</normaloff>:/newPrefix2/Country Flags/gt.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Guinea</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gn.png</normaloff>:/newPrefix2/Country Flags/gn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Guinea-Bissau</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gw.png</normaloff>:/newPrefix2/Country Flags/gw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Guyana</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gy.png</normaloff>:/newPrefix2/Country Flags/gy.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Haiti</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ht.png</normaloff>:/newPrefix2/Country Flags/ht.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Holy See</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/va.png</normaloff>:/newPrefix2/Country Flags/va.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Honduras</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/hn.png</normaloff>:/newPrefix2/Country Flags/hn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Hungary</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/hu.png</normaloff>:/newPrefix2/Country Flags/hu.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Iceland</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/is.png</normaloff>:/newPrefix2/Country Flags/is.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>India</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/in.png</normaloff>:/newPrefix2/Country Flags/in.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Indonesia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/id.png</normaloff>:/newPrefix2/Country Flags/id.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Iran</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ir.png</normaloff>:/newPrefix2/Country Flags/ir.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Iraq</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/iq.png</normaloff>:/newPrefix2/Country Flags/iq.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ireland</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ie.png</normaloff>:/newPrefix2/Country Flags/ie.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Israel</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/il.png</normaloff>:/newPrefix2/Country Flags/il.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Italy</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/it.png</normaloff>:/newPrefix2/Country Flags/it.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Jamaica</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/jm.png</normaloff>:/newPrefix2/Country Flags/jm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Japan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/jp.png</normaloff>:/newPrefix2/Country Flags/jp.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Jordan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/jo.png</normaloff>:/newPrefix2/Country Flags/jo.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kazakhstan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kz.png</normaloff>:/newPrefix2/Country Flags/kz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kenya</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ke.png</normaloff>:/newPrefix2/Country Flags/ke.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kiribati</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ki.png</normaloff>:/newPrefix2/Country Flags/ki.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kuwait</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kw.png</normaloff>:/newPrefix2/Country Flags/kw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Kyrgyzstan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kg.png</normaloff>:/newPrefix2/Country Flags/kg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Laos</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/la.png</normaloff>:/newPrefix2/Country Flags/la.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Latvia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/lv.png</normaloff>:/newPrefix2/Country Flags/lv.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lebanon</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/lb.png</normaloff>:/newPrefix2/Country Flags/lb.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lesotho</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ls.png</normaloff>:/newPrefix2/Country Flags/ls.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Liberia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/lr.png</normaloff>:/newPrefix2/Country Flags/lr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Libya</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ly.png</normaloff>:/newPrefix2/Country Flags/ly.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Liechtenstein</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/li.png</normaloff>:/newPrefix2/Country Flags/li.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Lithuania</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/lt.png</normaloff>:/newPrefix2/Country Flags/lt.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Luxembourg</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/lu.png</normaloff>:/newPrefix2/Country Flags/lu.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Madagascar</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mg.png</normaloff>:/newPrefix2/Country Flags/mg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Malawi</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mw.png</normaloff>:/newPrefix2/Country Flags/mw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Malaysia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/my.png</normaloff>:/newPrefix2/Country Flags/my.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Maldives</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mv.png</normaloff>:/newPrefix2/Country Flags/mv.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mali</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ml.png</normaloff>:/newPrefix2/Country Flags/ml.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Malta</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mt.png</normaloff>:/newPrefix2/Country Flags/mt.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Marshall Islands</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mh.png</normaloff>:/newPrefix2/Country Flags/mh.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mauritania</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mr.png</normaloff>:/newPrefix2/Country Flags/mr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mauritius</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mu.png</normaloff>:/newPrefix2/Country Flags/mu.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mexico</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mx.png</normaloff>:/newPrefix2/Country Flags/mx.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Micronesia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/fm.png</normaloff>:/newPrefix2/Country Flags/fm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Moldova</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/md.png</normaloff>:/newPrefix2/Country Flags/md.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Monaco</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mc.png</normaloff>:/newPrefix2/Country Flags/mc.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mongolia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mn.png</normaloff>:/newPrefix2/Country Flags/mn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Montenegro</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/me.png</normaloff>:/newPrefix2/Country Flags/me.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Morocco</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ma.png</normaloff>:/newPrefix2/Country Flags/ma.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mozambique</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mz.png</normaloff>:/newPrefix2/Country Flags/mz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Myanmar (formerly Burma)</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mm.png</normaloff>:/newPrefix2/Country Flags/mm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Namibia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/na.png</normaloff>:/newPrefix2/Country Flags/na.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nauru</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/nr.png</normaloff>:/newPrefix2/Country Flags/nr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nepal</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/np.png</normaloff>:/newPrefix2/Country Flags/np.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Netherlands</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/nl.png</normaloff>:/newPrefix2/Country Flags/nl.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>New Zealand</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/nz.png</normaloff>:/newPrefix2/Country Flags/nz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nicaragua</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ni.png</normaloff>:/newPrefix2/Country Flags/ni.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Niger</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ne.png</normaloff>:/newPrefix2/Country Flags/ne.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Nigeria</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ng.png</normaloff>:/newPrefix2/Country Flags/ng.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>North Korea</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kp.png</normaloff>:/newPrefix2/Country Flags/kp.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>North Macedonia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/mk.png</normaloff>:/newPrefix2/Country Flags/mk.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Norway</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/no.png</normaloff>:/newPrefix2/Country Flags/no.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Oman</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/om.png</normaloff>:/newPrefix2/Country Flags/om.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Pakistan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pk.png</normaloff>:/newPrefix2/Country Flags/pk.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Palau</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pw.png</normaloff>:/newPrefix2/Country Flags/pw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Palestine State</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ps.png</normaloff>:/newPrefix2/Country Flags/ps.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Panama</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pa.png</normaloff>:/newPrefix2/Country Flags/pa.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Papua New Guinea</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pg.png</normaloff>:/newPrefix2/Country Flags/pg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Paraguay</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/py.png</normaloff>:/newPrefix2/Country Flags/py.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Peru</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pe.png</normaloff>:/newPrefix2/Country Flags/pe.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Philippines</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ph.png</normaloff>:/newPrefix2/Country Flags/ph.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Poland</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pl.png</normaloff>:/newPrefix2/Country Flags/pl.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Portugal</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/pt.png</normaloff>:/newPrefix2/Country Flags/pt.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Qatar</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/qa.png</normaloff>:/newPrefix2/Country Flags/qa.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Romania</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ro.png</normaloff>:/newPrefix2/Country Flags/ro.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Russia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ru.png</normaloff>:/newPrefix2/Country Flags/ru.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Rwanda</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/rw.png</normaloff>:/newPrefix2/Country Flags/rw.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Saint Kitts and Nevis</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kn.png</normaloff>:/newPrefix2/Country Flags/kn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Saint Lucia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/is.png</normaloff>:/newPrefix2/Country Flags/is.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Saint Vincent and the Grenadines</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/vc.png</normaloff>:/newPrefix2/Country Flags/vc.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Samoa</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ws.png</normaloff>:/newPrefix2/Country Flags/ws.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>San Marino</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sm.png</normaloff>:/newPrefix2/Country Flags/sm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sao Tome and Principe</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/st.png</normaloff>:/newPrefix2/Country Flags/st.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Saudi Arabia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sa.png</normaloff>:/newPrefix2/Country Flags/sa.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Senegal</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sn.png</normaloff>:/newPrefix2/Country Flags/sn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Serbia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/rs.png</normaloff>:/newPrefix2/Country Flags/rs.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Seychelles</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sc.png</normaloff>:/newPrefix2/Country Flags/sc.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sierra Leone</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sl.png</normaloff>:/newPrefix2/Country Flags/sl.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Singapore</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sg.png</normaloff>:/newPrefix2/Country Flags/sg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Slovakia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sk.png</normaloff>:/newPrefix2/Country Flags/sk.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Slovenia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/si.png</normaloff>:/newPrefix2/Country Flags/si.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Solomon Islands</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sb.png</normaloff>:/newPrefix2/Country Flags/sb.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Somalia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/so.png</normaloff>:/newPrefix2/Country Flags/so.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>South Africa</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/za.png</normaloff>:/newPrefix2/Country Flags/za.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>South Korea</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/kr.png</normaloff>:/newPrefix2/Country Flags/kr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>South Sudan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ss.png</normaloff>:/newPrefix2/Country Flags/ss.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Spain</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/es.png</normaloff>:/newPrefix2/Country Flags/es.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sri Lanka</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/lk.png</normaloff>:/newPrefix2/Country Flags/lk.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sudan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sd.png</normaloff>:/newPrefix2/Country Flags/sd.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Suriname</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sr.png</normaloff>:/newPrefix2/Country Flags/sr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sweden</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/se.png</normaloff>:/newPrefix2/Country Flags/se.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Switzerland</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ch.png</normaloff>:/newPrefix2/Country Flags/ch.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Syria</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/sy.png</normaloff>:/newPrefix2/Country Flags/sy.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tajikistan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tj.png</normaloff>:/newPrefix2/Country Flags/tj.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tanzania</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tz.png</normaloff>:/newPrefix2/Country Flags/tz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Thailand</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/th.png</normaloff>:/newPrefix2/Country Flags/th.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Timor-Leste</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tl.png</normaloff>:/newPrefix2/Country Flags/tl.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Togo</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tg.png</normaloff>:/newPrefix2/Country Flags/tg.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tonga</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/to.png</normaloff>:/newPrefix2/Country Flags/to.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Trinidad and Tobago</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tt.png</normaloff>:/newPrefix2/Country Flags/tt.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tunisia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tn.png</normaloff>:/newPrefix2/Country Flags/tn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Turkey</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tr.png</normaloff>:/newPrefix2/Country Flags/tr.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Turkmenistan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tm.png</normaloff>:/newPrefix2/Country Flags/tm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tuvalu</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/tv.png</normaloff>:/newPrefix2/Country Flags/tv.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Uganda</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ug.png</normaloff>:/newPrefix2/Country Flags/ug.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Ukraine</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ua.png</normaloff>:/newPrefix2/Country Flags/ua.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>United Arab Emirates</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ae.png</normaloff>:/newPrefix2/Country Flags/ae.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>United Kingdom</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/gb.png</normaloff>:/newPrefix2/Country Flags/gb.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>United States of America</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/us.png</normaloff>:/newPrefix2/Country Flags/us.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Uruguay</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/uy.png</normaloff>:/newPrefix2/Country Flags/uy.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Uzbekistan</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/uz.png</normaloff>:/newPrefix2/Country Flags/uz.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Vanuatu</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/vu.png</normaloff>:/newPrefix2/Country Flags/vu.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Venezuela</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ve.png</normaloff>:/newPrefix2/Country Flags/ve.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Vietnam</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/vn.png</normaloff>:/newPrefix2/Country Flags/vn.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yemen</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/ye.png</normaloff>:/newPrefix2/Country Flags/ye.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Zambia</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/zm.png</normaloff>:/newPrefix2/Country Flags/zm.png</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Zimbabwe</string>
+             </property>
+             <property name="icon">
+              <iconset resource="img.qrc">
+               <normaloff>:/newPrefix2/Country Flags/zw.png</normaloff>:/newPrefix2/Country Flags/zw.png</iconset>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_6">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>130</y>
+              <width>121</width>
+              <height>21</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Select Country</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>90</y>
+              <width>101</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>PT Simple Bold Ruled</family>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>First Name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>90</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Last Name</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_16">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>130</y>
+              <width>61</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Reg_username">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>160</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Username ...</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_17">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>170</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Username</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_18">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>210</y>
+              <width>81</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Password</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Reg_confirm_password">
+            <property name="geometry">
+             <rect>
+              <x>670</x>
+              <y>200</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>Confirm Your Password ...</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_19">
+            <property name="geometry">
+             <rect>
+              <x>510</x>
+              <y>210</y>
+              <width>151</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Confirm Password</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Reg_password">
+            <property name="geometry">
+             <rect>
+              <x>180</x>
+              <y>200</y>
+              <width>301</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Password</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="back2Login_Button">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>390</y>
+              <width>241</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  background-color: 0;
+ color: rgb(93, 173, 226);
+  border-radius: 5px;
+}
+QPushButton::pressed{
+	padding-left:5px;
+	padding-top: 3px;
+}</string>
+            </property>
+            <property name="text">
+             <string>I'm already register back to login !!</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_20">
+            <property name="geometry">
+             <rect>
+              <x>320</x>
+              <y>0</y>
+              <width>331</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>MS Shell Dlg 2</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: 0;
+color: qlineargradient(spread:pad, x1:0.961, y1:0.091, x2:1, y2:0.00568182, stop:0.409091 rgba(0, 175, 178, 255), stop:1 rgba(255, 255, 255, 255));</string>
+            </property>
+            <property name="text">
+             <string> Create a Free Account !</string>
+            </property>
+           </widget>
+           <zorder>label_5</zorder>
+           <zorder>label_6</zorder>
+           <zorder>label_15</zorder>
+           <zorder>label_16</zorder>
+           <zorder>label_17</zorder>
+           <zorder>label_18</zorder>
+           <zorder>label_19</zorder>
+           <zorder>Reg_confirm_password</zorder>
+           <zorder>Reg_password</zorder>
+           <zorder>Reg_Btn</zorder>
+           <zorder>Reg_First_username</zorder>
+           <zorder>Reg_email</zorder>
+           <zorder>Reg_last_username</zorder>
+           <zorder>radio_female_Button</zorder>
+           <zorder>radio_male_Button</zorder>
+           <zorder>Country_Comb</zorder>
+           <zorder>label_8</zorder>
+           <zorder>Reg_username</zorder>
+           <zorder>back2Login_Button</zorder>
+           <zorder>label_20</zorder>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="forget_pass">
+          <widget class="QFrame" name="frame_3">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>20</y>
+             <width>531</width>
+             <height>381</height>
+            </rect>
+           </property>
+           <property name="cursor">
+            <cursorShape>ArrowCursor</cursorShape>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QFrame#frame_2{
+border-radius:5px;
+background-color: 0;
+}
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <widget class="QPushButton" name="Submit_Btn">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>270</y>
+              <width>251</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+              <stylestrategy>PreferDefault</stylestrategy>
+              <kerning>false</kerning>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
+            </property>
+            <property name="toolTip">
+             <string>Laroussi </string>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+QPushButton::pressed{
+	padding-left:5px;
+	padding-top: 5px;
+	background-color: rgb(163, 228, 215);
+}</string>
+            </property>
+            <property name="text">
+             <string>Submit</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Forget_Reg_username">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>100</y>
+              <width>251</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="frame">
+             <bool>true</bool>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Username ...</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Forget_Reg_email">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>141</y>
+              <width>251</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Normal</enum>
+            </property>
+            <property name="placeholderText">
+             <string>XXXXX@Email.com</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="back2Login_Button_2">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>333</y>
+              <width>121</width>
+              <height>23</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton{
+  background-color: 0;
+ color: rgb(93, 173, 226);
+  border-radius: 5px;
+}
+QPushButton::pressed{
+	padding-left:5px;
+	padding-top: 3px;
+}</string>
+            </property>
+            <property name="text">
+             <string>Back To Login !!</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_21">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>110</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>PT Simple Bold Ruled</family>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Username</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_22">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>150</y>
+              <width>61</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Email</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_23">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>190</y>
+              <width>131</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>New Password</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Confirm_Forget_New_password">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>220</y>
+              <width>251</width>
+              <height>35</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>Confirm Your Password ...</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_24">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>230</y>
+              <width>181</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>11</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(245, 245, 245);</string>
+            </property>
+            <property name="text">
+             <string>Confirm New Password</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_25">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>10</y>
+              <width>271</width>
+              <height>61</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>MS Shell Dlg 2</family>
+              <pointsize>20</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: 0;
+color: qlineargradient(spread:pad, x1:0.961, y1:0.091, x2:1, y2:0.00568182, stop:0.409091 rgba(0, 175, 178, 255), stop:1 rgba(255, 255, 255, 255));</string>
+            </property>
+            <property name="text">
+             <string>Forget Password !?</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="Forget_New_password">
+            <property name="geometry">
+             <rect>
+              <x>210</x>
+              <y>182</y>
+              <width>251</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>231</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="acceptDrops">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="echoMode">
+             <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="placeholderText">
+             <string>Enter Your Password</string>
+            </property>
+           </widget>
+           <zorder>back2Login_Button_2</zorder>
+           <zorder>label_21</zorder>
+           <zorder>label_22</zorder>
+           <zorder>label_23</zorder>
+           <zorder>label_24</zorder>
+           <zorder>label_25</zorder>
+           <zorder>Confirm_Forget_New_password</zorder>
+           <zorder>Forget_New_password</zorder>
+           <zorder>Submit_Btn</zorder>
+           <zorder>Forget_Reg_username</zorder>
+           <zorder>Forget_Reg_email</zorder>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="MediaTek_tab">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>2</y>
+           <width>551</width>
+           <height>411</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTabWidget #tabWidget {
+background-color: rgb(45, 45, 45);
+}
+
+QTabWidget::pane { /* The tab widget frame */
+    border: 1px solid rgb(95, 95, 95);
+}
+
+QTabWidget::tab-bar {
+    left: 0px; /* move to the right by 5px */
+}
+
+/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */
+QTabBar::tab {
+	background-color:rgb(26, 26, 26);
+	color: rgb(231, 231, 231);
+   
+    border-bottom-color: #C2C7CB; /* same as the pane color */
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    min-width: 8ex;
+    padding: 7px;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(45, 45, 45, 255), stop:1 rgba(97, 130, 171, 255));
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB; /* same as pane color */
+}
+
+QTabBar::tab:!selected {
+    margin-top: 2px; /* make non-selected tabs look smaller */
+}</string>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>16</width>
+           <height>16</height>
+          </size>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="icon">
+           <iconset resource="ico.qrc">
+            <normaloff>:/newPrefix/icons/google.png</normaloff>:/newPrefix/icons/google.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>UNIVERSAL</string>
+          </attribute>
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>531</width>
+             <height>321</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QGroupBox{
+    border:1px solid rgb(95, 95, 95);
+    border-radius:2px;
+	color: rgb(255, 255, 255);
+	margin-top: 5ex; /* leave space at the top for the title */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top center; /* position at the top center */
+    padding: 5 5px;
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(179, 55, 113, 255), stop:1 rgba(219, 78, 117, 255));
+	border-radius:10px;
+}
+
+QRadioButton::indicator {
+    width: 18px;
+    height: 18px;
+}
+QRadioButton {
+	color: rgb(229, 229, 229);
+}
+
+QRadioButton::indicator::unchecked {
+	
+}
+
+QRadioButton::indicator::checked {
+    
+	image: url(:/newPrefix/icons/radio-button.png);
+}
+</string>
+           </property>
+           <property name="title">
+            <string> MediaTek Service :</string>
+           </property>
+           <widget class="QRadioButton" name="read_info_radioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>50</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>READ INFO</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ico.qrc">
+              <normaloff>:/newPrefix/icons/information.png</normaloff>:/newPrefix/icons/information.png</iconset>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="UL_radioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>140</y>
+              <width>191</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>UNLOCK BOOTLOADER</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ico.qrc">
+              <normaloff>:/newPrefix/icons/unlocked.png</normaloff>:/newPrefix/icons/unlocked.png</iconset>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="RL_radioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>170</y>
+              <width>181</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>RELOCK BOOTLOADER</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ico.qrc">
+              <normaloff>:/newPrefix/icons/lock.png</normaloff>:/newPrefix/icons/lock.png</iconset>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="factory_reset_radioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>110</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>FACTORY RESET</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ico.qrc">
+              <normaloff>:/newPrefix/icons/circle-of-two.png</normaloff>:/newPrefix/icons/circle-of-two.png</iconset>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="FRP_radioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>200</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>REMOVE FRP</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ico.qrc">
+              <normaloff>:/newPrefix/icons/clean.png</normaloff>:/newPrefix/icons/clean.png</iconset>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="auth_bypass_radioButton">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>80</y>
+              <width>141</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <bold>false</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>AUTH BYPASS</string>
+            </property>
+            <property name="icon">
+             <iconset resource="ico.qrc">
+              <normaloff>:/newPrefix/icons/shield.png</normaloff>:/newPrefix/icons/shield.png</iconset>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="Start_BTN">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>340</y>
+             <width>531</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(92, 209, 115);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+           </property>
+           <property name="text">
+            <string> SART</string>
+           </property>
+           <property name="icon">
+            <iconset resource="ico.qrc">
+             <normaloff>:/newPrefix/icons/lightning-bolt.png</normaloff>:/newPrefix/icons/lightning-bolt.png</iconset>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="readtab">
+          <attribute name="icon">
+           <iconset resource="ico.qrc">
+            <normaloff>:/newPrefix/icons/search.png</normaloff>:/newPrefix/icons/search.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>Read partition</string>
+          </attribute>
+          <widget class="QCheckBox" name="readselectallcheckbox">
+           <property name="geometry">
+            <rect>
+             <x>12</x>
+             <y>56</y>
+             <width>16</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(241, 241, 241);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="readDumpGPTCheckbox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>350</y>
+             <width>95</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(241, 241, 241);</string>
+           </property>
+           <property name="text">
+            <string>Dump GPT</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="readpartitionsbtn">
+           <property name="geometry">
+            <rect>
+             <x>440</x>
+             <y>10</y>
+             <width>101</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(92, 209, 115);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+           </property>
+           <property name="text">
+            <string> Save As</string>
+           </property>
+           <property name="icon">
+            <iconset resource="ico.qrc">
+             <normaloff>:/newPrefix/icons/diskette.png</normaloff>:/newPrefix/icons/diskette.png</iconset>
+           </property>
+          </widget>
+          <widget class="QLabel" name="readtitle">
+           <property name="geometry">
+            <rect>
+             <x>390</x>
+             <y>350</y>
+             <width>151</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Select partitions to read</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+          <widget class="QTableWidget" name="readpartitionList">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>531</width>
+             <height>291</height>
+            </rect>
+           </property>
+           <property name="autoFillBackground">
+            <bool>false</bool>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QTableWidget {
+	background-color: rgb(38, 38, 38);
+	color: rgb(255, 255, 255);
+	gridline-color:rgb(40, 55, 71);
+	alternate-background-color:rgb(40, 55, 71);
+	 selection-background-color:rgb(184, 233, 148);
+    }
+
+QHeaderView::section{
+	background-color:rgb(26, 26, 26);
+	border:1px solid rgb(45, 45, 45);
+	color: rgb(255, 255, 255);
+}
+
+
+</string>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Box</enum>
+           </property>
+           <property name="frameShadow">
+            <enum>QFrame::Raised</enum>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustIgnored</enum>
+           </property>
+           <property name="autoScroll">
+            <bool>true</bool>
+           </property>
+           <property name="showDropIndicator" stdset="0">
+            <bool>true</bool>
+           </property>
+           <property name="dragDropOverwriteMode">
+            <bool>true</bool>
+           </property>
+           <property name="alternatingRowColors">
+            <bool>true</bool>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="textElideMode">
+            <enum>Qt::ElideLeft</enum>
+           </property>
+           <property name="verticalScrollMode">
+            <enum>QAbstractItemView::ScrollPerItem</enum>
+           </property>
+           <property name="horizontalScrollMode">
+            <enum>QAbstractItemView::ScrollPerItem</enum>
+           </property>
+           <property name="showGrid">
+            <bool>true</bool>
+           </property>
+           <property name="gridStyle">
+            <enum>Qt::SolidLine</enum>
+           </property>
+           <property name="sortingEnabled">
+            <bool>false</bool>
+           </property>
+           <property name="cornerButtonEnabled">
+            <bool>true</bool>
+           </property>
+           <attribute name="horizontalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderVisible">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string/>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Partition Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Offset</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Length</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Type</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Size</string>
+            </property>
+           </column>
+          </widget>
+          <widget class="QPushButton" name="Checkpartitionsbtn">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>141</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+  background-color: rgb(52, 152, 219);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(92, 209, 115);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+           </property>
+           <property name="text">
+            <string>Check Partition(s)</string>
+           </property>
+           <property name="icon">
+            <iconset resource="ico.qrc">
+             <normaloff>:/newPrefix/icons/lightning-bolt.png</normaloff>:/newPrefix/icons/lightning-bolt.png</iconset>
+           </property>
+          </widget>
+          <zorder>readDumpGPTCheckbox</zorder>
+          <zorder>readpartitionsbtn</zorder>
+          <zorder>readtitle</zorder>
+          <zorder>readpartitionList</zorder>
+          <zorder>readselectallcheckbox</zorder>
+          <zorder>Checkpartitionsbtn</zorder>
+         </widget>
+         <widget class="QWidget" name="writetab">
+          <attribute name="icon">
+           <iconset resource="ico.qrc">
+            <normaloff>:/newPrefix/icons/pencil.png</normaloff>:/newPrefix/icons/pencil.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>Write partition</string>
+          </attribute>
+          <widget class="QScrollArea" name="writepartitionList">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>531</width>
+             <height>291</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>280</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(50, 50, 50);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>529</width>
+              <height>289</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="writepartbtn">
+           <property name="geometry">
+            <rect>
+             <x>400</x>
+             <y>10</y>
+             <width>141</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+  background-color: rgb(52, 168, 83);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(92, 209, 115);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+           </property>
+           <property name="text">
+            <string> Write Partition(s)</string>
+           </property>
+           <property name="icon">
+            <iconset resource="ico.qrc">
+             <normaloff>:/newPrefix/icons/write.png</normaloff>:/newPrefix/icons/write.png</iconset>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="writeselectfromdir">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>131</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+  background-color: rgb(9, 132, 227);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+QPushButton::hover{
+	background-color:rgb(85, 161, 227);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+           </property>
+           <property name="text">
+            <string> Select Partition</string>
+           </property>
+           <property name="icon">
+            <iconset resource="ico.qrc">
+             <normaloff>:/newPrefix/icons/click.png</normaloff>:/newPrefix/icons/click.png</iconset>
+           </property>
+          </widget>
+          <widget class="QLabel" name="writetitle">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>350</y>
+             <width>311</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Select partitions to write</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="erasetab">
+          <attribute name="icon">
+           <iconset resource="ico.qrc">
+            <normaloff>:/newPrefix/icons/eraser1.png</normaloff>:/newPrefix/icons/eraser1.png</iconset>
+          </attribute>
+          <attribute name="title">
+           <string>Erase partition</string>
+          </attribute>
+          <widget class="QScrollArea" name="erasepartitionList">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>531</width>
+             <height>291</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="MinimumExpanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>280</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(50, 50, 50);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>529</width>
+              <height>289</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QPushButton" name="erasepartitionsbtn">
+           <property name="geometry">
+            <rect>
+             <x>420</x>
+             <y>10</y>
+             <width>121</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+  background-color: rgb(214, 48, 49);
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+QPushButton::hover{
+	background-color:rgb(209, 109, 114);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+           </property>
+           <property name="text">
+            <string> Erase Partition</string>
+           </property>
+           <property name="icon">
+            <iconset resource="ico.qrc">
+             <normaloff>:/newPrefix/icons/eraser.png</normaloff>:/newPrefix/icons/eraser.png</iconset>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="eraseselectallpartitionscheckbox">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>20</y>
+             <width>221</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Select all partitions</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="erasetitle">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>350</y>
+             <width>231</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Select partitions to erase</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+        <widget class="QPushButton" name="Stop_BTN">
+         <property name="geometry">
+          <rect>
+           <x>980</x>
+           <y>370</y>
+           <width>81</width>
+           <height>37</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	background-color:#DE3163 ;
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+	background-color:rgb(227, 68, 70);
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}</string>
+         </property>
+         <property name="text">
+          <string> STOP</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ico.qrc">
+           <normaloff>:/newPrefix/icons/pause.png</normaloff>:/newPrefix/icons/pause.png</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>12</width>
+           <height>12</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="fullProgress">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>390</y>
+           <width>401</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="partProgress">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>370</y>
+           <width>401</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="value">
+          <number>100</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+        <widget class="QTextEdit" name="logBox">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>35</y>
+           <width>491</width>
+           <height>331</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Roboto</family>
+           <bold>true</bold>
+           <hintingpreference>PreferVerticalHinting</hintingpreference>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QTextEdit {
+border: 1px solid rgb(95, 95, 95);
+border-radius:2px;	
+color: rgb(247, 247, 247);
+background-color: rgb(50, 50, 50);
+padding: 5px;
+}</string>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhMultiLine</set>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="horizontalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOff</enum>
+         </property>
+         <property name="lineWrapMode">
+          <enum>QTextEdit::NoWrap</enum>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="html">
+          <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;meta charset=&quot;utf-8&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+hr { height: 1px; border-width: 0; }
+li.unchecked::marker { content: &quot;\2610&quot;; }
+li.checked::marker { content: &quot;\2612&quot;; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Roboto'; font-size:9pt; font-weight:700; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; color:#dddddd;&quot;&gt;LAROUSSI UNIVERSAL TOOL V1.0&lt;/span&gt;&lt;span style=&quot; font-size:12pt; color:#ffaa00;&quot;&gt; BETA&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:400;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffaa00;&quot;&gt;FACEBOOK :&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://www.facebook.com/LaroussiGsm&quot;&gt;&lt;span style=&quot; font-weight:400; text-decoration: underline; color:#0078d4;&quot;&gt;https://www.facebook.com/LaroussiGsm&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffaa00;&quot;&gt;MESSENGER :&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;m.me/103692875775674&quot;&gt;&lt;span style=&quot; font-weight:400; text-decoration: underline; color:#0078d4;&quot;&gt;m.me/103692875775674&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffaa00;&quot;&gt;WEBSITE :&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://laroussigsm.net/&quot;&gt;&lt;span style=&quot; font-weight:400; text-decoration: underline; color:#0078d4;&quot;&gt;https://laroussigsm.net/&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#ffaa00;&quot;&gt;TELEGRAM :&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;a href=&quot;https://t.me/UncleAnonymous&quot;&gt;&lt;span style=&quot; font-weight:400; text-decoration: underline; color:#0078d4;&quot;&gt;https://t.me/UncleAnonymous&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:400; text-decoration: underline; color:#0078d4;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; color:#afafaf;&quot;&gt;MAIN CREDIT :&lt;/span&gt;&lt;span style=&quot; font-weight:400; color:#afafaf;&quot;&gt; LAROUSSIGSM.NET&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:400; color:#afafaf;&quot;&gt;PACKED BY LAROUSSI GSM | UNCLE ANONYMOUS&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:400; color:#afafaf;&quot;&gt;LAROUSSI BOULANOUAR | OULED DJELLAL, ALGERIA&lt;br /&gt;&lt;br /&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::TextSelectableByMouse</set>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Open_Devmgmt">
+         <property name="geometry">
+          <rect>
+           <x>570</x>
+           <y>4</y>
+           <width>141</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+  background-color:rgb(26, 26, 26);
+  color: rgb(255, 255, 255);
+  border-radius: 3px;
+}
+QPushButton::hover{
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0 rgba(45, 45, 45, 255), stop:1 rgba(97, 130, 171, 255));
+}
+QPushButton::pressed{
+	padding-left:2px;
+	padding-top: 1px;
+	background-color: rgb(223, 160, 5);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>DEVICE MANAGER</string>
+         </property>
+         <property name="icon">
+          <iconset resource="ico.qrc">
+           <normaloff>:/newPrefix/icons/lightning-bolt.png</normaloff>:/newPrefix/icons/lightning-bolt.png</iconset>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="Huawei_tab">
+        <widget class="QLabel" name="label_10">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>160</y>
+           <width>311</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>45</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Huawei Tab</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="Qualcomm_tab">
+        <widget class="QLabel" name="label_11">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>160</y>
+           <width>411</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>45</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Qualcomm Tab</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="Samsung_tab">
+        <widget class="QLabel" name="label_12">
+         <property name="geometry">
+          <rect>
+           <x>330</x>
+           <y>160</y>
+           <width>411</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>45</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Samsung Tab</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="Android_tab">
+        <widget class="QLabel" name="label_13">
+         <property name="geometry">
+          <rect>
+           <x>340</x>
+           <y>150</y>
+           <width>411</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>45</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Android Tab</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="About_tab">
+        <widget class="QLabel" name="label_14">
+         <property name="geometry">
+          <rect>
+           <x>450</x>
+           <y>170</y>
+           <width>291</width>
+           <height>81</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>45</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>About Tab</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>610</x>
+         <y>144</y>
+         <width>241</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>13</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(26, 26, 26);
+color: rgb(52, 168, 83);</string>
+       </property>
+       <property name="text">
+        <string>FREE OPEN SOURCE PROJECT</string>
+       </property>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources>
+  <include location="ico.qrc"/>
+  <include location="img.qrc"/>
+ </resources>
+ <connections/>
+</ui>

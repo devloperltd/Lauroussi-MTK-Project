@@ -1,0 +1,40 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>icons/T.logo2.png</file>
+    <file>icons/Texteur.png</file>
+    <file>icons/chip.png</file>
+    <file>icons/search.png</file>
+    <file>icons/tyrannosaurus-rex.png</file>
+    <file>icons/search2.png</file>
+    <file>icons/google.png</file>
+    <file>icons/samsung.png</file>
+    <file>icons/huawei.png</file>
+    <file>icons/ANDROID.png</file>
+    <file>icons/Qualcomm.png</file>
+    <file>icons/MEDIATEK.png</file>
+    <file>icons/help.png</file>
+    <file>icons/Test-Point.png</file>
+    <file>icons/shield.png</file>
+    <file>icons/home.png</file>
+    <file>icons/eraser1.png</file>
+    <file>icons/pencil.png</file>
+    <file>icons/eraser.png</file>
+    <file>icons/search.png</file>
+    <file>icons/write.png</file>
+    <file>icons/click.png</file>
+    <file>icons/pause.png</file>
+    <file>icons/diskette.png</file>
+    <file>icons/lightning-bolt.png</file>
+    <file>icons/robot.png</file>
+    <file>icons/clean.png</file>
+    <file>icons/circle-of-two.png</file>
+    <file>icons/information.png</file>
+    <file>icons/lock.png</file>
+    <file>icons/unlocked.png</file>
+    <file>icons/radio-button.png</file>
+    <file>icons/minus.png</file>
+    <file>ico.qrc</file>
+    <file>icons/cancel.png</file>
+    <file>icons/bolt.png</file>
+  </qresource>
+</RCC>
